@@ -59,14 +59,20 @@ public class CustomerTest {
    public void canBuyArt(){
        customer.buyArt(artGallery,artwork);
 
-       ArrayList<Artwork> expected = new ArrayList<>();
-       expected.add(artworkTwo);
-       expected.add(artworkThree);
-       expected.add(artworkFour);
+       ArrayList<Artwork> expectedStock = new ArrayList<>();
+       expectedStock.add(artworkTwo);
+       expectedStock.add(artworkThree);
+       expectedStock.add(artworkFour);
+       
+      ArrayList<Artwork> expectedCollection = new ArrayList<>();
+       expectedCollection.add(artwork);
 
        assertThat(customer.getWallet()).isEqualTo(5000);
-          assertThat(artGallery.getTill()).isEqualTo(5000);
-       assertThat(artGallery.getStock()).isEqualTo(expected);
+       assertThat(artGallery.getTill()).isEqualTo(5000);
+       assertThat(artGallery.getStock()).isEqualTo(expectedStock);
+       assertThat(customer.getCollection()).isEqualTo(expectedCollection);
+       
+       
 
    }
 
