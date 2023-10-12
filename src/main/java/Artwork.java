@@ -26,7 +26,7 @@ public class Artwork {
         this.artist = artist;
     }
 
-    public double getPrice() {
+    public double getPrice(){
         return this.price;
     }
 

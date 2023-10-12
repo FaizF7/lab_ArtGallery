@@ -5,10 +5,9 @@ public class ArtGallery {
     private double till;
     private ArrayList<Artwork> stock; // stock
 
-    public ArtGallery(String name, double till){
+    public ArtGallery(String name){
         this.name = name;
-        this.till = till;
-
+        this.till = 0;
         this.stock = new ArrayList<>(); // empty arraylist
     }
 
@@ -32,7 +31,14 @@ public class ArtGallery {
         return this.stock;
     }
 
-    public void setStock(ArrayList<Artwork> stock) {
+    public void setStock(ArrayList<Artwork> stock){
         this.stock = stock;
+    }
+
+    public void addArt(Artwork newArt){
+        this.stock.add(newArt);
+    }
+    public void removeArt(Artwork removeArt){
+        this.stock.remove(removeArt);
     }
 }
