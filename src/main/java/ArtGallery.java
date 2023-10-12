@@ -41,4 +41,10 @@ public class ArtGallery {
     public void removeArt(Artwork removeArt){
         this.stock.remove(removeArt);
     }
+
+    public void addToTill(double artWorkPrice){
+        this.till += artWorkPrice;
+    }
+    
+   
 }

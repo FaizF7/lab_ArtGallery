@@ -53,16 +53,16 @@ public class ArtGalleryTest {
         assertThat(artGallery.getTill()).isEqualTo(50);
     }
 
-    @Test
-    public void canGetStock(){
-        ArrayList<Artwork> expected = new ArrayList<>();
-        expected.add(artwork);
-        expected.add(artworkTwo);
-        expected.add(artworkThree);
-        expected.add(artworkFour);
+   @Test
+   public void canGetStock(){
+       ArrayList<Artwork> expected = new ArrayList<>();
+       expected.add(artwork);
+       expected.add(artworkTwo);
+       expected.add(artworkThree);
+       expected.add(artworkFour);
 
-        assertThat(artGallery.getStock()).isEqualTo(expected);
-    }
+       assertThat(artGallery.getStock()).isEqualTo(expected);
+   }
 
     @Test
     public void canSetStock(){
@@ -72,7 +72,7 @@ public class ArtGalleryTest {
         expected.add(artworkThree);
         expected.add(artworkFour);
 
-        ArtGallery.setStock(expected);
+        artGallery.setStock(expected);
 
         assertThat(artGallery.getStock()).isEqualTo(expected);
     }

@@ -23,4 +23,13 @@ public class Customer {
     public void setWallet(double wallet) {
         this.wallet = wallet;
     }
+
+    public void buyArt(ArtGallery artGallery, Artwork artworkToBuy){
+        this.wallet -= artworkToBuy.getPrice();
+
+        artGallery.addToTill(artworkToBuy.getPrice());
+
+        artGallery.removeArt(artworkToBuy);
+
+    }
 }
